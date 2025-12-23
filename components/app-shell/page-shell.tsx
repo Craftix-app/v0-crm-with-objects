@@ -4,12 +4,13 @@ import { TopBar } from "./top-bar"
 interface PageShellProps {
   title: string
   children: React.ReactNode
+  onMenuClick?: () => void
 }
 
-export function PageShell({ title, children }: PageShellProps) {
+export function PageShell({ title, children, onMenuClick }: PageShellProps) {
   return (
     <div className="flex min-h-screen flex-col">
-      <TopBar title={title} />
+      <TopBar title={title} onMenuClick={onMenuClick} />
       <main className="flex-1 p-8">{children}</main>
     </div>
   )
