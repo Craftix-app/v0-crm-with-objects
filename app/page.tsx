@@ -1,11 +1,14 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { Button } from "@/components/registry/controls"
 
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="flex h-16 items-center justify-between border-b border-border px-6">
-        <span className="text-sm font-medium tracking-tight">Workspace</span>
+        <Link href="/" className="flex items-center">
+          <Image src="/images/craftx-logo.png" alt="CraftX" width={120} height={32} className="h-8 w-auto" priority />
+        </Link>
         <nav className="flex items-center gap-4">
           <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
             About
@@ -14,7 +17,7 @@ export default function HomePage() {
             Pricing
           </Link>
           <Button asChild size="sm">
-            <Link href="/app/dashboard">Get Started</Link>
+            <Link href="/dashboard">Get Started</Link>
           </Button>
         </nav>
       </header>
@@ -25,7 +28,7 @@ export default function HomePage() {
           A calm, focused environment to manage your notes, tasks, and contacts.
         </p>
         <Button asChild>
-          <Link href="/app/dashboard">Enter Workspace</Link>
+          <Link href="/dashboard">Enter Workspace</Link>
         </Button>
       </main>
 

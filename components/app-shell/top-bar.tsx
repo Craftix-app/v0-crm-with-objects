@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Button, Input } from "@/components/registry/controls"
 import { User, Search } from "lucide-react"
 import { SidebarToggle } from "./sidebar"
 

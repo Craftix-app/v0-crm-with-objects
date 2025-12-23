@@ -1,0 +1,15 @@
+{
+  "id": "task-detail-sample",
+  "title": "Task Details",
+  "template": "detail",
+  "objectKey": "task",
+  "blocks": [
+    {
+      "blockType": "detailPanel",
+      "id": "task-details",
+      "config": {
+        "fields": ["title", "description", "status", "priority", "dueDate"]
+      }
+    }
+  ]
+}

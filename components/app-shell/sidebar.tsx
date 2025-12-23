@@ -1,17 +1,20 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { LayoutDashboard, StickyNote, CheckSquare, Users, Settings, Menu, X } from "lucide-react"
+import { LayoutDashboard, Users, Building2, CheckSquare, FileText, Database, Sparkles, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/registry/controls"
 
 const navItems = [
-  { href: "/app/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/app/notes", label: "Notes", icon: StickyNote },
-  { href: "/app/tasks", label: "Tasks", icon: CheckSquare },
-  { href: "/app/contacts", label: "Contacts", icon: Users },
-  { href: "/app/settings", label: "Settings", icon: Settings },
+  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/contacts", label: "Contacts", icon: Users },
+  { href: "/companies", label: "Companies", icon: Building2 },
+  { href: "/tasks", label: "Tasks", icon: CheckSquare },
+  { href: "/documents", label: "Documents", icon: FileText },
+  { href: "/registry", label: "Registry", icon: Database },
+  { href: "/generate", label: "Generate", icon: Sparkles },
 ]
 
 interface SidebarProps {
@@ -34,7 +37,9 @@ export function Sidebar({ isOpen = true, onToggle }: SidebarProps) {
         )}
       >
         <div className="flex h-16 items-center justify-between border-b border-border px-6">
-          <span className="text-sm font-medium tracking-tight">Workspace</span>
+          <Link href="/" className="flex items-center">
+            <Image src="/images/craftx-logo.png" alt="CraftX" width={120} height={32} className="h-8 w-auto" priority />
+          </Link>
           <Button variant="ghost" size="icon" className="h-8 w-8 md:hidden" onClick={onToggle}>
             <X className="h-4 w-4" />
             <span className="sr-only">Close sidebar</span>

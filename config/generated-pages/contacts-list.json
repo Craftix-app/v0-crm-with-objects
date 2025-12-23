@@ -1,0 +1,27 @@
+{
+  "id": "contacts-list-sample",
+  "title": "Contacts",
+  "template": "list",
+  "objectKey": "contact",
+  "blocks": [
+    {
+      "blockType": "queryBar",
+      "id": "contacts-query",
+      "config": {
+        "enabled": true
+      }
+    },
+    {
+      "blockType": "dataView",
+      "id": "contacts-table",
+      "config": {
+        "mode": "table",
+        "fields": ["firstName", "lastName", "email", "phone", "status"],
+        "sort": {
+          "field": "lastName",
+          "direction": "asc"
+        }
+      }
+    }
+  ]
+}

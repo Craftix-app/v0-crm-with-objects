@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/registry/controls"
 
 export default function PricingPage() {
   return (
@@ -16,7 +16,7 @@ export default function PricingPage() {
             Pricing
           </Link>
           <Button asChild size="sm">
-            <Link href="/app/dashboard">Get Started</Link>
+            <Link href="/dashboard">Get Started</Link>
           </Button>
         </nav>
       </header>

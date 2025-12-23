@@ -1,0 +1,16 @@
+{
+  "id": "invalid-sample",
+  "title": "Invalid Page",
+  "template": "list",
+  "objectKey": "contact",
+  "blocks": [
+    {
+      "blockType": "dataView",
+      "id": "invalid-table",
+      "config": {
+        "mode": "table",
+        "fields": ["firstName", "unknownField", "fakeColumn"]
+      }
+    }
+  ]
+}

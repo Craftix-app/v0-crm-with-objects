@@ -1,0 +1,27 @@
+{
+  "id": "dashboard-sample",
+  "title": "Contacts Dashboard",
+  "template": "dashboard",
+  "objectKey": "contact",
+  "blocks": [
+    {
+      "blockType": "statSummary",
+      "id": "contact-stats",
+      "config": {
+        "stats": [
+          { "label": "Total Contacts", "op": "count" },
+          { "label": "With Email", "field": "email", "op": "count" },
+          { "label": "With Phone", "field": "phone", "op": "count" }
+        ]
+      }
+    },
+    {
+      "blockType": "dataView",
+      "id": "contacts-cards",
+      "config": {
+        "mode": "table",
+        "fields": ["firstName", "lastName", "email", "status"]
+      }
+    }
+  ]
+}
